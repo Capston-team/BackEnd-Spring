@@ -1,0 +1,118 @@
+{
+    "kt": {
+        "CU": {
+            "gold": 20,
+            "normal": 20,
+            "vip": 20,
+            "vvip": 20
+        },
+        "GS25": {
+            "gold": 10,
+            "normal": 5,
+            "vip": 10,
+            "vvip": 10
+        },
+        "이마트24": {
+            "gold": 10,
+            "normal": 5,
+            "vip": 10,
+            "vvip": 10
+        },
+        "배스킨라빈스": {
+            "gold": 30,
+            "normal": 30,
+            "vip": 30,
+            "vvip": 100
+        },
+        "파리바게뜨": {
+            "gold": 10,
+            "normal": 5,
+            "vip": 10,
+            "vvip": 10
+        },
+        "스타벅스": {
+            "gold": 100,
+            "normal": 100,
+            "vip": 100,
+            "vvip": 100
+        },
+        "달콤": {
+            "gold": 10,
+            "normal": 10,
+            "vip": 100,
+            "vvip": 100
+        },
+        "카페베네": {
+            "gold": 10,
+            "normal": 10,
+            "vip": 10,
+            "vvip": 10
+        },
+        "할리스": {
+            "gold": 0,
+            "normal": 0,
+            "vip": 0,
+            "vvip": 100
+        },
+        "뚜레쥬르": {
+            "gold": 15,
+            "normal": 10,
+            "vip": 15,
+            "vvip": 15
+        },
+        "던킨": {
+            "gold": 0,
+            "normal": 0,
+            "vip": 100,
+            "vvip": 100
+        },
+        "파리크라상": {
+            "gold": 10,
+            "normal": 5,
+            "vip": 10,
+            "vvip": 10
+        },
+        "도미노피자": {
+            "gold": 15,
+            "normal": 15,
+            "vip": 20,
+            "vvip": 75
+        },
+        "피자헛": {
+            "gold": 15,
+            "normal": 15,
+            "vip": 15,
+            "vvip": 15
+        },
+        "아웃백": {
+            "gold": 15,
+            "normal": 5,
+            "vip": 15,
+            "vvip": 15
+        },
+        "파파존스": {
+            "gold": 15,
+            "normal": 15,
+            "vip": 30,
+            "vvip": 30
+        },
+        "VIPS": {
+            "gold": 5,
+            "normal": 5,
+            "vip": 15,
+            "vvip": 100
+        },
+        "미스터피자": {
+            "gold": 15,
+            "normal": 15,
+            "vip": 20,
+            "vvip": 20
+        },
+        "피자알볼로": {
+            "gold": 15,
+            "normal": 15,
+            "vip": 15,
+            "vvip": 15
+        }
+    }
+}
