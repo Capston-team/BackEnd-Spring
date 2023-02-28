@@ -1,0 +1,1 @@
+web: java -jar WhereToGo-prod-ebextensions-1.jar
