@@ -20,8 +20,8 @@ public class SearchApiController {
     private final SearchApiService service;
 
     @GetMapping("/")
-    public ResponseEntity GET_main() {
-        return new ResponseEntity(HttpStatus.OK);
+    public String healthCheck() {
+        return "The service is up and running...";
     }
 
     @GetMapping("/map")

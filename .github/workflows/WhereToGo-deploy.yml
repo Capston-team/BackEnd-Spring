@@ -31,24 +31,26 @@ jobs:
         uses: 1466587594/get-current-time@v2
         id: current-time
         with:
-          format: YYYYMMDDTHHmm
+          format: YYYY-MM-DDTHH-mm
           utcOffset: "+09:00"
 
       - name: Generate deployment package
         run: |
           mkdir -p deploy
-          cp build/libs/WhereToGO-0.0.1-SNAPSHOT.jar deploy/WhereToGo-prod-ebextensions-1.jar
+          cp build/libs/*.jar deploy/application.jar
           cp Procfile deploy/Procfile
           cp -r .ebextensions deploy/.ebextensions
-          cd deploy && zip -r WhereToGo-prod-label-${{steps.current-time.outputs.formattedTime}}-${{github.sha}} .
+          cp -r .platform deploy/.platform
+          cd deploy && zip -r deploy.zip .
+
 
       - name: Deploy to Elastic Beanstalk
-        uses: einaregilsson/beanstalk-deploy@v14
+        uses: einaregilsson/beanstalk-deploy@v20
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: WhereToGo
-          environment_name: Wheretogo-env
-          version_label: WhereToGo-prod-label-${{steps.current-time.outputs.formattedTime}}-${{github.sha}}
+          environment_name: Wheretogo-env-1
+          version_label: Github Action-${{steps.current-time.outputs.formattedTime}}
           region: ap-northeast-2
-          deployment_package: deploy/WhereToGo-prod-label-${{steps.current-time.outputs.formattedTime}}-${{github.sha}}.zip
+          deployment_package: deploy/deploy.zip
