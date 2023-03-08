@@ -1,1 +1,1 @@
-web: java -jar build/libs/WhereToGO-0.0.1-SNAPSHOT.jar
+web: java -jar WhereToGO-prod-ebextensions-1.jar
