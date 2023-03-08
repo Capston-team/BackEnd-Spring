@@ -1,7 +1,6 @@
 package study.wheretogo.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,19 +19,19 @@ public class SearchApiController {
     private final SearchApiService service;
 
     @GetMapping("/")
-    public String healthCheck() {
-        return "The service is up and running...";
+    public ResponseEntity<String> healthCheck() {
+        return new ResponseEntity<>("The service is up and running...", HttpStatus.OK);
     }
 
     @GetMapping("/map")
-    public List<ResponseData> GET_mapCoordinate(
+    public ResponseEntity<List<ResponseData>> GET_mapCoordinate(
             @RequestParam String category,
             @RequestParam String longitude,
             @RequestParam String latitude,
             @RequestParam String carrier,
             @RequestParam String grade) {
 
-        return service.getResponseData(category, carrier, grade, longitude, latitude);
+        return ResponseEntity.ok(service.getResponseData(category, carrier, grade, longitude, latitude));
     }
 
 }
