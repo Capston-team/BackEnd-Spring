@@ -20,7 +20,7 @@ public class SearchApiController {
 
     @GetMapping("/")
     public ResponseEntity<String> healthCheck() {
-        return new ResponseEntity<>("The service is up and running...", HttpStatus.OK);
+        return ResponseEntity.ok("The service is up and running...");
     }
 
     @GetMapping("/map")
